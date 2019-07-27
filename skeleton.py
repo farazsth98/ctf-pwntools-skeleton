@@ -61,5 +61,5 @@ if len(argv) < 2:
 
   REMOTE = False
 else:
-  sh = remote('pwn.hsctf.com', 3333)
+  sh = remote('IP_ADDR_HERE', 1337)
   REMOTE = True
