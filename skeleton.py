@@ -65,3 +65,5 @@ def start():
   else:
     sh = remote('pwn.hsctf.com', 2345)
     REMOTE = True
+
+start()
