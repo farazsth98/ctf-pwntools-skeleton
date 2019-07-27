@@ -56,8 +56,8 @@ if len(argv) < 2:
 
   sh = process(BINARY, stdout=stdout, stdin=stdin)
 
-if DEBUG:
-  attach_gdb()
+  if DEBUG:
+    attach_gdb()
 
   REMOTE = False
 else:
