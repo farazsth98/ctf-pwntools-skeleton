@@ -50,16 +50,18 @@ def attach_gdb():
 if DEBUG:
   context.log_level = 'debug'
 
-if len(argv) < 2:
-  stdout = process.PTY
-  stdin = process.PTY
+def start():
+  global sh
+  if len(argv) < 2:
+    stdout = process.PTY
+    stdin = process.PTY
 
-  sh = process(BINARY, stdout=stdout, stdin=stdin)
+    sh = process(BINARY, stdout=stdout, stdin=stdin)
 
-  if DEBUG:
-    attach_gdb()
+    # if DEBUG:
+    #   attach_gdb()
 
-  REMOTE = False
-else:
-  sh = remote('IP_ADDR_HERE', 1337)
-  REMOTE = True
+    REMOTE = False
+  else:
+    sh = remote('pwn.hsctf.com', 2345)
+    REMOTE = True
