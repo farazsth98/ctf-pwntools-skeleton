@@ -63,7 +63,7 @@ def start():
 
     REMOTE = False
   else:
-    sh = remote('pwn.hsctf.com', 2345)
+    sh = remote('IP', 1337)
     REMOTE = True
 
 start()
